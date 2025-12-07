@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	cmake -DCMAKE_INSTALL_PREFIX=/usr .
+
+override_dh_auto_build:
+	$(MAKE)
+
+override_dh_auto_install:
+	mkdir -p debian/altimit-os/usr/games
+	mkdir -p debian/altimit-os/usr/share/altimit-os
+	install -m 755 Altimit debian/altimit-os/usr/games/altimit-os
+	cp -r assets debian/altimit-os/usr/share/altimit-os/
+
+override_dh_auto_clean:
+	$(MAKE) clean || true
+	rm -rf obj-x86_64-linux-gnu
+	rm -f CMakeCache.txt
+	rm -rf CMakeFiles

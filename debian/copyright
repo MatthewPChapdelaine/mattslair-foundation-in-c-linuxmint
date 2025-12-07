@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: altimit-os
+Source: https://github.com/yourusername/altimit-os
+
+Files: *
+Copyright: 2024 Matthew
+License: MIT or GPL-2+ (adjust as needed)

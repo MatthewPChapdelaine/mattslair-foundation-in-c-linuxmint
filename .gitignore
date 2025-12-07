@@ -1,0 +1,34 @@
+# Build artifacts
+Altimit
+*.o
+*.a
+*.so
+*.deb
+*.ddeb
+*.buildinfo
+*.changes
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+obj-x86_64-linux-gnu/
+
+# Debian packaging artifacts
+debian/.debhelper/
+debian/altimit-os/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
